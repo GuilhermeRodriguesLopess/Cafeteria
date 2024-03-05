@@ -1,0 +1,34 @@
+CREATE DATABASE cafeteria;
+CREATE TABLE Cliente (
+    Id_cliente INT AUTO_INCREMENT,
+    Nome VARCHAR(255),
+    Endereco VARCHAR(255),
+    Bairro VARCHAR(255),
+    Cidade VARCHAR(255),
+    Uf CHAR(2),
+    Cep VARCHAR(10),
+    Rg VARCHAR(20),
+    Cpf VARCHAR(14),
+    Celular VARCHAR(20),
+    DataNascimento DATE,
+    DataCadastro DATE,
+    PRIMARY KEY (id_cliente)
+);
+CREATE TABLE Funcionario (
+    Id_funcionario INT AUTO_INCREMENT,
+    Nome VARCHAR(255),
+    Cargo VARCHAR(255),
+    Departamento VARCHAR(255),
+    DataNascimento DATE,
+    DataContratacao DATE,
+    Salario DECIMAL(10, 2),
+    Endereco VARCHAR(255),
+    Cidade VARCHAR(255),
+    Uf CHAR(2),
+    Cep VARCHAR(10),
+    Rg VARCHAR(20),
+    Cpf VARCHAR(14),
+    Telefone VARCHAR(20),
+    Email VARCHAR(255),
+    PRIMARY key (id_funcionario)
+);

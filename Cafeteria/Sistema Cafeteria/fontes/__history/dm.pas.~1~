@@ -1,0 +1,25 @@
+unit dm;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  Tdata = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  data: Tdata;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

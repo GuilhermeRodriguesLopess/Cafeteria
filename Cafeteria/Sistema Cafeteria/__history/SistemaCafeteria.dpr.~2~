@@ -1,0 +1,14 @@
+program SistemaCafeteria;
+
+uses
+  Vcl.Forms,
+  U_login in 'fontes\U_login.pas' {login};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(Tlogin, login);
+  Application.Run;
+end.

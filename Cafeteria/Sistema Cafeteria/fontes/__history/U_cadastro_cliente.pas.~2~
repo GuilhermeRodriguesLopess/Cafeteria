@@ -1,0 +1,31 @@
+unit U_cadastro_cliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls, Vcl.ComCtrls;
+
+type
+  Tcasdastrocliente = class(TForm)
+    PageControl1: TPageControl;
+    Cliente: TTabSheet;
+    Image1: TImage;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  casdastrocliente: Tcasdastrocliente;
+
+implementation
+
+{$R *.dfm}
+
+end.

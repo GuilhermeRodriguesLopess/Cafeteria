@@ -1,0 +1,39 @@
+unit U_home;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.Menus;
+
+type
+  Thome = class(TForm)
+    Image1: TImage;
+    MainMenu1: TMainMenu;
+    Arquivo1: TMenuItem;
+    Arquivo2: TMenuItem;
+    Cadastrodecliente1: TMenuItem;
+    Cadastrar1: TMenuItem;
+    Cadastrar2: TMenuItem;
+    Cadastrar3: TMenuItem;
+    procedure Arquivo2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  home: Thome;
+
+implementation
+
+{$R *.dfm}
+
+procedure Thome.Arquivo2Click(Sender: TObject);
+begin
+close;
+end;
+
+end.

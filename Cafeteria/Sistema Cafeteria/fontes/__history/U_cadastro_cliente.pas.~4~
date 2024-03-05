@@ -1,0 +1,142 @@
+unit U_cadastro_cliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.DBCtrls, Vcl.Mask, dm, data.db;
+
+type
+  Tcasdastrocliente = class(TForm)
+    tb: TPageControl;
+    tb_cliente: TTabSheet;
+    tb_consulta: TTabSheet;
+    db_nome: TDBEdit;
+    db_endereco: TDBEdit;
+    db_cep: TDBEdit;
+    DBComboBox1: TDBComboBox;
+    db_celular: TDBEdit;
+    db_datanasc: TDBEdit;
+    db_cidade: TDBEdit;
+    db_rg: TDBEdit;
+    db_bairro: TDBEdit;
+    db_cpf: TDBEdit;
+    db_email: TDBEdit;
+    Image1: TImage;
+    btn_inserir: TImage;
+    btn_salvar: TImage;
+    btn_cancelar: TImage;
+    btn_localizar: TImage;
+    btn_excluir: TImage;
+    btn_fechar: TImage;
+    btn_editar: TImage;
+    db_id: TDBEdit;
+    procedure btn_inserirClick(Sender: TObject);
+    procedure btn_editarClick(Sender: TObject);
+    procedure btn_salvarClick(Sender: TObject);
+    procedure btn_excluirClick(Sender: TObject);
+    procedure btn_cancelarClick(Sender: TObject);
+    procedure btn_fecharClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btn_localizarClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure configbotoes;
+  public
+    { Public declarations }
+  end;
+
+var
+  casdastrocliente: Tcasdastrocliente;
+
+implementation
+
+{$R *.dfm}
+
+{ Tcasdastrocliente }
+
+procedure Tcasdastrocliente.btn_cancelarClick(Sender: TObject);
+begin
+  dm1.tb_clientes.cancel;
+
+  configbotoes;
+end;
+
+procedure Tcasdastrocliente.btn_editarClick(Sender: TObject);
+begin
+  dm1.tb_clientes.Edit;
+  configbotoes;
+end;
+
+procedure Tcasdastrocliente.btn_excluirClick(Sender: TObject);
+begin
+case Application.MessageBox('Deseja Excluir o Cliente', 'Excluir Cliente',
+MB_YESNO + MB_ICONQUESTION) of
+IDYES:
+Begin
+Dm1.tb_clientes.delete;
+ShowMessage('O Cliente foi excluído!!');
+end;
+IDNO:
+begin
+exit;
+end;
+end;
+end;
+
+procedure Tcasdastrocliente.btn_fecharClick(Sender: TObject);
+begin
+  if dm1.tb_clientes.State in [dsinsert, dsedit] then
+  begin
+     showmessage('Salve ou cancele o registro antes de continuar!');
+     exit
+  end
+  else
+  begin
+    close;
+  end;
+
+end;
+
+procedure Tcasdastrocliente.btn_inserirClick(Sender: TObject);
+begin
+  dm1.tb_clientes.Active:=true;
+  dm1.tb_clientes.Insert;
+
+  configbotoes;
+end;
+
+procedure Tcasdastrocliente.btn_localizarClick(Sender: TObject);
+begin
+     tb.TabIndex:=1;
+     tb_consulta.TabVisible:=true;
+     tb_cliente.TabVisible:=false;
+end;
+
+procedure Tcasdastrocliente.btn_salvarClick(Sender: TObject);
+begin
+dm1.tb_clientes.Post;
+showmessage('Cliente Salvo com Sucesso');
+configbotoes;
+end;
+
+procedure Tcasdastrocliente.configbotoes;
+begin
+btn_inserir.Enabled := dm1.tb_clientes.State in [dsbrowse];
+btn_editar.Enabled := dm1.tb_clientes.State in [dsbrowse];
+btn_excluir.Enabled := dm1.tb_clientes.State in [dsbrowse];
+btn_salvar.Enabled := dm1.tb_clientes.State in [dsinsert, dsedit];
+btn_cancelar.Enabled := dm1.tb_clientes.State in [dsinsert, dsedit];
+end;
+
+procedure Tcasdastrocliente.FormCreate(Sender: TObject);
+begin
+     tb.TabIndex:=0;
+     tb_consulta.TabVisible:=false;
+
+     btn_salvar.Enabled:=false;
+     btn_cancelar.Enabled:=false;
+end;
+
+end.

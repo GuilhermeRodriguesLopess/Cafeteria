@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/06/23 21:06:14.000.837,=C:\Users\Guilhas-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/23 21:19:17.000.988,C:\Users\Guilhas-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\fontes\U_login.pas</Transaction>
+    <Transaction>2023/06/23 21:19:17.000.988,C:\Users\Guilhas-PC\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\fontes\U_login.dfm</Transaction>
+    <Transaction>2023/06/23 21:19:59.000.576,C:\Users\Guilhas-PC\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\SistemaCafeteria.dproj</Transaction>
+    <Transaction>2023/06/23 21:51:42.000.378,=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\Unit1.pas</Transaction>
+    <Transaction>2023/06/23 21:53:39.000.355,C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\fontes\dm.pas=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\Unit1.pas</Transaction>
+    <Transaction>2023/06/23 21:53:39.000.355,C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\fontes\dm.dfm=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\Unit1.dfm</Transaction>
+    <Transaction>2023/06/23 22:58:42.000.318,=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\Unit1.pas</Transaction>
+    <Transaction>2023/06/24 00:07:21.000.729,C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\fontes\U_splash.dfm=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\Unit1.dfm</Transaction>
+    <Transaction>2023/06/24 00:07:21.000.729,C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\fontes\U_splash.pas=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\Unit1.pas</Transaction>
+    <Transaction>2023/06/24 00:09:13.000.768,=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\Unit1.pas</Transaction>
+    <Transaction>2023/06/24 00:09:29.000.073,C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\fontes\U_home.pas=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\Unit1.pas</Transaction>
+    <Transaction>2023/06/24 00:09:29.000.073,C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\fontes\U_home.dfm=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\Unit1.dfm</Transaction>
+    <Transaction>2023/06/24 23:00:03.000.748,=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\Unit1.pas</Transaction>
+    <Transaction>2023/06/25 01:00:31.000.521,=C:\Users\Guilhas-PC\Documents\Delphi 10\Sistema Cafeteria\Unit1.pas</Transaction>
+    <Transaction>2023/06/29 10:41:03.000.926,=C:\Users\Terceiros Anos\Downloads\Sistema Cafeteria\Unit1.pas</Transaction>
+    <Transaction>2023/06/29 10:41:56.000.809,C:\Users\Terceiros Anos\Downloads\Sistema Cafeteria\Unit1.pas=C:\Users\Terceiros Anos\Downloads\Sistema Cafeteria\fontes\U_cadastro_cliente.pas</Transaction>
+    <Transaction>2023/06/29 10:41:56.000.809,C:\Users\Terceiros Anos\Downloads\Sistema Cafeteria\Unit1.dfm=C:\Users\Terceiros Anos\Downloads\Sistema Cafeteria\fontes\U_cadastro_cliente.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

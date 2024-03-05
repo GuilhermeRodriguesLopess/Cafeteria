@@ -1,0 +1,59 @@
+unit U_cadastro_cliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.DBCtrls, Vcl.Mask, dm, data.db;
+
+type
+  Tcasdastrocliente = class(TForm)
+    tb: TPageControl;
+    tb_cliente: TTabSheet;
+    tb_consulta: TTabSheet;
+    db_nome: TDBEdit;
+    db_endereco: TDBEdit;
+    db_cep: TDBEdit;
+    DBComboBox1: TDBComboBox;
+    db_celular: TDBEdit;
+    db_datanasc: TDBEdit;
+    db_cidade: TDBEdit;
+    db_rg: TDBEdit;
+    db_bairro: TDBEdit;
+    db_cpf: TDBEdit;
+    db_email: TDBEdit;
+    Image1: TImage;
+    btn_inserir: TImage;
+    btn_salvar: TImage;
+    btn_cancelar: TImage;
+    btn_localizar: TImage;
+    btn_excluir: TImage;
+    btn_fechar: TImage;
+    btn_editar: TImage;
+  private
+    { Private declarations }
+    procedure configbotoes;
+  public
+    { Public declarations }
+  end;
+
+var
+  casdastrocliente: Tcasdastrocliente;
+
+implementation
+
+{$R *.dfm}
+
+{ Tcasdastrocliente }
+
+procedure Tcasdastrocliente.configbotoes;
+begin
+btn_inserir.Enabled := dm1.tb_clientes.State in [dsbrowse];
+btn_editar.Enabled := dm1.tb_clientes.State in [dsbrowse];
+btn_excluir.Enabled := dm1.tb_clientes.State in [dsbrowse];
+btn_salvar.Enabled := dm1.tb_clientes.State in [dsinsert, dsedit];
+btn_cancelar.Enabled := dm1.tb_clientes.State in [dsinsert, dsedit];
+end;
+
+end.
